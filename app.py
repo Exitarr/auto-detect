@@ -1,23 +1,8 @@
-import os
-import json
 import base64
 from flask import Flask, render_template, request
+from car_detection import detect_cars
 
 app = Flask(__name__)
-
-# Function to save data to JSON file
-def save_to_json(data):
-    db_file = os.path.join('static/uploads', 'db.json')
-    if os.path.exists(db_file):
-        with open(db_file, 'r') as f:
-            db = json.load(f)
-    else:
-        db = []
-    
-    db.append(data)
-    
-    with open(db_file, 'w') as f:
-        json.dump(db, f, indent=4)
 
 # Route for the Home page
 @app.route('/')
@@ -35,20 +20,26 @@ def form():
         if file.filename == '':
             return 'No selected file'
         
-        # Encode image to base64
-        encoded_string = base64.b64encode(file.read()).decode('utf-8')
+        # Read image file as binary
+        image_data = file.read()
+
+        # Pass image data to car_detection.py and get output image
+        output_image_data = detect_cars(image_data)
         
-        # Prepare data to save
+        # Encode output image to base64 for display
+        output_image_base64 = base64.b64encode(output_image_data).decode('utf-8')
+        
+        # Encode input image to base64 for display
+        encoded_string = base64.b64encode(image_data).decode('utf-8')
+        
+        # Prepare data to display
         data = {
-            'id': len(os.listdir('static/uploads')) + 1,  # Generate ID based on number of files
             'name': name,
-            'image': encoded_string
+            'image': encoded_string,
+            'output_image': output_image_base64
         }
         
-        # Save data to JSON file
-        save_to_json(data)
-        
-        return render_template('output.html',id=data['id'], name=data['name'], image=data['image'])
+        return render_template('output.html', data=data)
     
     return render_template('form.html')
 

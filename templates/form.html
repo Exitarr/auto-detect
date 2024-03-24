@@ -13,17 +13,22 @@
             <li><a href="{{ url_for('form') }}">Form</a></li>
         </ul>
     </nav>
-    <form class="upload-img-form" method="POST" enctype="multipart/form-data" >
-        <div class="form-element">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-        </div>
-        <div class="form-element"> 
-            <label for="img">Image:</label>
-            <input type="file" id="file" name="file" accept="image/*">
-        </div>
-        <button type="submit" value="submit">Submit</button>
-    </form>
+    <section class="hero-section">
+        <form class="upload-img-form" method="POST" enctype="multipart/form-data" >
+            <h1 class="form-element">Upload Image</h1>
+            <div class="inner-container">
+                <div class="form-element">
+                    <label for="name">Description:</label>
+                    <input type="text" id="name" name="name" placeholder="enter the description">
+                </div>
+                <div class="form-element"> 
+                    <label for="img">Image:</label>
+                    <input type="file" id="file" name="file" accept="image/*">
+                </div>
+            </div>
+            <button type="submit" value="submit">Submit</button>
+        </form>
+    </section>
     <footer>
         <p>made by @<a href="https://github.com/Exitarr">Sourav Das</a></p>
     </footer>

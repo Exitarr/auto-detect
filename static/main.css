@@ -37,23 +37,36 @@ nav a:hover {
 .hero-section {
     width: 100vw;
     height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     overflow-y: hidden;
+    gap: 20px;
+}
+h1{
+    font-size: 3em;
+    margin: 0;
+
 }
 
 .upload-img-form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 85vh;
+    justify-content: space-between;
+    align-self: center;
+    height: 40vh; /* Decreased from 85vh to 50vh */
+    width: 25vw; /* Added this to limit the width of the form */
+    border: 2px solid #333; /* Or any other color you prefer */
+    padding: 20px;
+    margin: 10px;
 }
 
 .form-element{
     margin: 10px;
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .form-element label {
@@ -66,19 +79,23 @@ nav a:hover {
     width: 300px;
 }
 
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust this value as needed */
+}
+
 button {
     background-color: #333;
     color: white;
+    width: 8vw;
+    font-size: large;
     padding: 10px 20px;
     margin: 10px;
     border: none;
     cursor: pointer;
 }
 
-.output-image {
-    width: 500px; /* Or any other size you prefer */
-    height: auto; /* Keep the aspect ratio */
-}
 
 footer {
     background-color: #333;
