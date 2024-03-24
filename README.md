@@ -26,7 +26,7 @@ Flask-App is a web application built with Flask and OpenCV for car detection.
 ## Usage
 
 1. Start the application:
-    go to docker dekstop and run the instance providing the port value and run localhost:port
+    go to docker dekstop and run the instance providing the port value and run
 
 2. Open a web browser and navigate to `http://localhost:5000` to use the application.
 
