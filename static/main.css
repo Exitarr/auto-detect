@@ -34,18 +34,33 @@ nav a:hover {
     background-color: #111;
 }
 
-.hero-section {
+
+
+.common-section {
     width: 100vw;
     height: 85vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     overflow-y: hidden;
     gap: 20px;
 }
-h1{
+
+.hero-section {
+    flex-direction: column;
+}
+
+.output-section {
+    flex-direction: column;
+}
+
+.hero-section h1{
+    font-size: 6rem;
+    margin: 0;
+}
+
+h2{
     font-size: 3em;
     margin: 0;
 
