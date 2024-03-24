@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}"> 
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('form') }}">Form</a></li>
+        </ul>
+    </nav>
+    <form class="upload-img-form" method="POST" enctype="multipart/form-data" >
+        <div class="form-element">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="form-element"> 
+            <label for="img">Image:</label>
+            <input type="file" id="file" name="file" accept="image/*">
+        </div>
+        <button type="submit" value="submit">Submit</button>
+    </form>
+    <footer>
+        <p>made by @<a href="https://github.com/Exitarr">Sourav Das</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body, html {
+    overflow-y: hidden;
+}
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+    font-size: x-large;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 18px 22px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+
+.hero-section {
+    width: 100vw;
+    height: 85vh;
+    text-align: center;
+    overflow-y: hidden;
+}
+
+.upload-img-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.form-element{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-element label {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.form-element input {
+    height: 30px;
+    width: 300px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.output-image {
+    width: 500px; /* Or any other size you prefer */
+    height: auto; /* Keep the aspect ratio */
+}
+
+footer {
+    background-color: #333;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #111;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}"> 
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('form') }}">Form</a></li>
+        </ul>
+    </nav>
+    <section class="hero-section">
+        <h1>Uploaded and transported image</h1>
+        <div class="image-section">
+            <img class="output-image" src="data:image/jpeg;base64,{{ image }}" alt="Uploaded Image">
+            <img class="output-image" src="data:image/jpeg;base64,{{ image }}" alt="Uploaded Image">
+        </div>
+    </section>
+    <footer>
+        <p>Made by @<a href="https://github.com/Exitarr">Sourav Das</a></p>
+    </footer>
+</body>
+</html>
