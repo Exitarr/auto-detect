@@ -20,15 +20,13 @@ Flask-App is a web application built with Flask and OpenCV for car detection.
 
 3. Build the Docker image:
     ```bash
-    docker-compose build
+    docker built -t "your image name"
     ```
 
 ## Usage
 
 1. Start the application:
-    ```bash
-    docker-compose up
-    ```
+    go to docker dekstop and run the instance providing the port value and run localhost:port
 
 2. Open a web browser and navigate to `http://localhost:5000` to use the application.
 
